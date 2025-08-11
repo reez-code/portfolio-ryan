@@ -1,0 +1,103 @@
+/* Main Portfolio Section */
+.portfolio-section {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/images/backgrounds/logofolio-bg.jpg");
+}
+
+.portfolio-nav {
+  margin-top: 3rem;
+}
+
+.portfolio-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Tabs Default */
+.portfolio-tab {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Active Tab — Dynamic Color */
+.portfolio-tab.active {
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 2;
+}
+
+/* Content Area */
+.portfolio-content {
+  min-height: 80vh;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: -20px;
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Placeholder Section */
+.section-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  font-size: 1.5rem;
+  color: #666;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-nav {
+    padding: 1.5rem 0;
+  }
+
+  .portfolio-nav-container {
+    padding: 0 1rem;
+  }
+
+  .portfolio-tabs {
+    gap: 0.3rem;
+  }
+
+  .portfolio-tab {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-tab {
+    width: 80%;
+    text-align: center;
+  }
+}
